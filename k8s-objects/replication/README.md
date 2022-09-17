@@ -15,4 +15,5 @@ When load does become too much for the number of existing instances, Kubernetes 
 In these cases, multiple small applications provide very specific functionality.
 ## Cloud native applications: 
 Because cloud-native applications are based on the theory that any component can fail at any time, replication is a perfect environment for implementing them, as multiple instances are baked into the architecture.
-Mobile applications: Mobile applications can often be architected so that the mobile client interacts with an isolated version of the server application.
+## Mobile applications:
+Mobile applications can often be architected so that the mobile client interacts with an isolated version of the server application.
