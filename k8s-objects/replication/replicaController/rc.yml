@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: soak-test-rc
+spec:
+  replicas: 3
+  selector:
+    app: soak-test-rc
+  template:
+    metadata:
+      name: soaktestrc
+      labels:
+        app: soak-test-rc
+    spec:
+      containers:
+      - name: soaktestrc
+        image: nickchase/soaktest
+        ports:
+        - containerPort: 80
