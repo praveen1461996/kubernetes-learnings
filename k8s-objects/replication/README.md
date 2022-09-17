@@ -10,7 +10,7 @@ Load balancing: Having multiple versions of a container enables you to easily se
 When load does become too much for the number of existing instances, Kubernetes enables you to easily scale up your application, adding additional instances as needed.
 
 
-Replication is appropriate for numerous use cases, including:
+# Replication is appropriate for numerous use cases, including:
 ## Microservices-based applications: 
 In these cases, multiple small applications provide very specific functionality.
 ## Cloud native applications: 
