@@ -1,9 +1,0 @@
- apiVersion: apps/v1
- kind: ReplicaSet
- metadata:
-   name: nginx-webserver
- spec:
-   replicas: 3
-   selector:
-     matchLabels:
-       app: nginx-webserver #existing running pod with this label
