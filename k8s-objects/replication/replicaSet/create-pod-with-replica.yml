@@ -1,0 +1,20 @@
+ apiVersion: apps/v1
+ kind: ReplicaSet
+ metadata:
+   name: soak-test-rs
+ spec:
+   replicas: 3
+   selector:
+     matchLabels:
+       app: soak-test-rs
+   template:
+     metadata:
+       labels:
+         app: soak-test-rs
+         environment: development
+     spec:
+       containers:
+       - name: soaktestrs
+         image: nickchase/soaktest
+         ports:
+         - containerPort: 80
