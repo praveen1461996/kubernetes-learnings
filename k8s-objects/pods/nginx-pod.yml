@@ -6,6 +6,8 @@ kind: Pod
                     
 metadata:           # Metadata: here we can define data about the object we are about to create.
   name: webserver   # In this example, we only provide the name of the pod. But you can provide other details like the namespace.
+  labels:
+    app: nginx-webserver
 spec:               #The spec part defines the characteristics that a given Kubernetes object should have. 
                     # It is the cluster’s responsibility to update the status of the object to always match the desired configuration. 
                     # In our example, the spec instructs that this object (the pod) should have one container with some attributes.
