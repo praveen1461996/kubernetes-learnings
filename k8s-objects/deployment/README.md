@@ -17,3 +17,23 @@ The following are typical use cases for Deployments:
 - Use the status of the Deployment as an indicator that a rollout has stuck.
 - Clean up older ReplicaSets that you don't need anymore.
 
+# Clone repository
+`git clone https://github.com/praveen1461996/kubernetes-learnings.git`
+`cd kubernetes-learnings/k8s-objects/deployment`
+## Create Deployment 
+Before you begin, make sure your Kubernetes cluster is up and running. Follow the steps given below to create the above Deployment:
+
+- Create the Deployment by running the following command:
+  `kubectl apply -f create-deployment.yml`
+- Run `kubectl get deployments` to check if the Deployment was created.
+- To see the Deployment rollout status, run `kubectl rollout status deployment/nginx-deployment`.
+- Run the `kubectl get deployments` again a few seconds later
+- To see the ReplicaSet (`rs`) created by the Deployment, run `kubectl get rs`.
+- To see the labels automatically generated for each Pod, run `kubectl get pods --show-labels`
+    The output is similar to:
+```
+NAME                                READY   STATUS    RESTARTS       AGE   LABELS
+nginx-deployment-7fb96c846b-jhblk   1/1     Running   0              59m   app=nginx,pod-template-hash=7fb96c846b
+nginx-deployment-7fb96c846b-qk22z   1/1     Running   0              59m   app=nginx,pod-template-hash=7fb96c846b
+nginx-deployment-7fb96c846b-rzvwj   1/1     Running   0              59m   app=nginx,pod-template-hash=7fb96c846b
+  ```
