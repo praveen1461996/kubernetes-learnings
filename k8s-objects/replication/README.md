@@ -17,3 +17,8 @@ In these cases, multiple small applications provide very specific functionality.
 Because cloud-native applications are based on the theory that any component can fail at any time, replication is a perfect environment for implementing them, as multiple instances are baked into the architecture.
 ## Mobile applications:
 Mobile applications can often be architected so that the mobile client interacts with an isolated version of the server application.
+
+
+# ReplicationController Vs ReplicaSet:
+
+ The major difference between a replication controller and replica set is that the rolling-update command works with Replication Controllers, but won't work with a Replica Set.  This is because Replica Sets are meant to be used as the backend for Deployments
