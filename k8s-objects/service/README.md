@@ -32,7 +32,7 @@ Note: A Service can map any incoming port to a targetPort. By default and for co
 `
 
 Port definitions in Pods have names, and you can reference these names in the targetPort attribute of a Service. For example, we can bind the targetPort of the Service to the Pod port in the following way:
-
+`bind-target-port.yml`
 ```
 apiVersion: v1
 kind: Pod
@@ -60,5 +60,5 @@ spec:
   - name: name-of-service-port
     protocol: TCP
     port: 80
-    targetPort: http-web-svc
+    targetPort: http-web-svc   # using container name instead of target port
 ```
